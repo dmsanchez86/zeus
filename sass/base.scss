@@ -75,7 +75,9 @@ nav{
 	
 	h4{
 		display: inline;
-		font-size: 20px;
+		font-size: 24px;
+	    font-family: 'Myriad Pro Condensed';
+    	font-weight: 100;
 	}
 	
 	.container_contact{
@@ -157,9 +159,116 @@ nav{
 			vertical-align: bottom;
 		    top: 14px;
 	    	left: 18px;
+	    	font-family: 'Myriad Pro Condensed';
+    		text-transform: uppercase;
 			@include border-radius(3px);
 			@include transition(all .5s ease);
 		}
+	}
+}
+
+section{
+	position: relative;
+	background-color: rgba(130,130,130,.7);
+	background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    background-image: linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-image: -webkit-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-image: -moz-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-image: -o-linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(45deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+	
+	h1{
+		text-align: center;
+		font-family: 'Myriad Pro Condensed';
+    	text-transform: uppercase;
+    	font-size: 40px;
+    	color: white;
+    	background: rgba(130,130,130,.7);
+    	padding: 1.8rem 0 0;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	font-weight: 100;
+    	width: 100%;
+    	
+    	&:before{
+    		content: '';
+    		position: absolute;
+    		border: solid rgba(130,130,130,.7);
+    		border-width: 40px (100vw / 2 - 3vw) 0 (100vw / 2);
+    		border-color: rgba(130, 130, 130, 0.7) transparent transparent transparent;
+    		top: 100%;
+    		left: 0;
+    	}
+	}
+	
+	img{
+		width: 100%;
+	}
+	
+	.description{
+		position: absolute;
+		bottom: (1.5rem + 6.5rem);
+		right: 1.5rem;
+		background: rgba(255,255,255,.7);
+		color: $darkblue_theme;
+		padding: .8rem;
+		text-align: justify;
+		max-width: 100%;
+		width: 600px;
+		font-family: 'Myriad Pro Condensed';
+		font-size: 20px;
+		@include border-radius(2px);
+	}
+	
+	.separator{
+		min-height: 100px;
+	}
+	
+	&.blue{
+		background-color: rgba(0,92,170,0.8)!important;
+		
+		h1{
+			background: rgba(0,92,170,0.8);
+			
+			&:before{
+				border-top-color: rgba(0,92,170,0.8);
+			}
+		}
+		
+		.description{
+			right: inherit;
+			left: 1.5rem;
+		}
+	}
+}
+
+footer{
+	padding: 3rem;
+	text-align: center;
+	
+	.networkings{
+		a{
+			&:first-child{
+				i{
+					padding: .5rem .65rem;
+				}
+			}
+		}
+		
+		i{
+			display: inline-block;
+			padding: .5rem;
+			background: $blue_theme;
+			color: white;
+			@include border-radius(2px);
+		}
+	}
+	
+	span:not(.networkings),a{
+		color: $darkblue_theme;
+		font-size: 14px;
+		font-family: 'Myriad Pro Condensed';
 	}
 }
 
