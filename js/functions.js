@@ -16,6 +16,7 @@ var App = {
         this.lazy();
         this.viewport();
         this.logo();
+        this.formContact();
     },
     viewport: function(){
         // initialization viewport
@@ -53,6 +54,26 @@ var App = {
             setTimeout(function(){
                 $('.logo').addClass('load');
             },50);
+        });
+    },
+    formContact: function(){
+        $('#formContact').unbind('submit').submit(function(e){
+            e.preventDefault();
+            
+            $.ajax({
+                url: 'sendEmail.php',
+                type: 'POST',
+                data: {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    telephone: $('#telephone').val(),
+                    subject: $('#subject').val(),
+                    message: $('#message').val()
+                },
+                success: function(response){
+                    console.log(response);
+                }
+            });
         });
     }
 }
