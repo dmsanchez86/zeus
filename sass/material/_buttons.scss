@@ -178,6 +178,16 @@ button.btn-floating {
 // Minimun button
 .btn-xs{
   padding: 0 .5rem;
+  background: $blue_theme;
+  height: 25px;
+  font-size: .71rem;
+  line-height: 1;
+  font-family: 'Myriad Pro Condensed';
+  
+  &:hover,
+  &:focus{
+    background: $darkblue_theme;
+  }
 }
 
 // Block button

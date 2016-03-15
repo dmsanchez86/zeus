@@ -3084,7 +3084,14 @@ button.btn-floating {
     font-size: 1.6rem; }
 
 .btn-xs {
-  padding: 0 .5rem; }
+  padding: 0 .5rem;
+  background: #00B1EB;
+  height: 25px;
+  font-size: .71rem;
+  line-height: 1;
+  font-family: 'Myriad Pro Condensed'; }
+  .btn-xs:hover, .btn-xs:focus {
+    background: #005CAA; }
 
 .btn-block {
   display: block; }
@@ -4411,12 +4418,19 @@ footer {
   width: 360px;
   overflow: visible;
   background: #cecdcd;
+  max-height: inherit;
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -khtml-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }
   .modal.contact .modal-content {
     padding: 0 .71rem 0;
     position: relative; }
@@ -4698,7 +4712,8 @@ input[type=search] {
   height: 2rem; }
 textarea.materialize-textarea,
 input.materialize-textarea {
-  min-height: 7rem; }
+  min-height: 7rem;
+  margin-bottom: .2rem; }
 
 .input-field {
   margin-top: 0; }
@@ -4709,5 +4724,8 @@ input.materialize-textarea {
     color: #00B1EB; }
     .input-field label.active {
       color: #00B1EB; }
+
+.lean-overlay {
+  background: rgba(255, 255, 255, 0.7); }
 
 /*# sourceMappingURL=main.css.map */

@@ -209,7 +209,9 @@ footer{
 		width: 360px;
 		overflow: visible;
 		background: rgb(206, 205, 205);
+		max-height: inherit;
 		@include border-radius(4px);
+		@include box-shadow(none);
 		
 		.modal-content{
 			padding: 0 .71rem 0;
@@ -322,6 +324,7 @@ input{
 	
 	&.materialize-textarea{
 		min-height: 7rem;
+		margin-bottom: .2rem;
 	}
 }
 
@@ -338,6 +341,10 @@ input{
 			color: $blue_theme;
 		}
 	}
+}
+
+.lean-overlay{
+	background: rgba(255,255,255,.7);
 }
 
 @import 'queries';
