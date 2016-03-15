@@ -600,3 +600,95 @@
 @mixin transform-style($value){
     @include prefixes(transform-style, $value);
 }
+
+@mixin container-contact{
+  .container_contact{
+		float: right;
+		cursor: pointer;
+		
+		&:hover{
+			span{
+				color: $darkblue_theme;
+				background: white;
+			}
+			
+			&:not(.popup){
+			  b{
+  				&:before{
+  					background: $blue_theme;
+  					@include box-shadow(0 0 5px #323232 inset);
+  				}
+  				
+  				&:after{
+  					background: $darkblue_theme;
+  					@include box-shadow(0 0 10px #323232);
+  				}
+  				
+  				i{
+  					color: white;
+  				}
+  			}
+			}
+		}
+		
+		b{
+			display: inline-block;
+			position: relative;
+			padding: 6px 9px;
+			z-index: 1;
+			margin-top: .25rem;
+    		
+    		&:before{
+    			background: #f3f3f3;
+    			content: '';
+    			width: 100%;
+    			height: 100%;
+    			position: absolute;
+    			left: 0;
+    			top: 0;
+    			z-index: -1;
+    			@include border-radius(3px);
+    			@include transform(rotate(45deg));
+    		}
+    		
+    		&:after{
+    			background: #c7c7c7;
+    			content: '';
+    			width: 140%;
+    			height: 140%;
+    			position: absolute;
+    			left: -20%;
+    			top: -20%;
+    			z-index: -2;
+    			@include border-radius(5px);
+    			@include box-shadow(0 0 28px #323232);
+    			@include transform(rotate(45deg));
+    		}
+			
+			i{
+				font-size: 35px;
+				color: $darkblue_theme;
+			}
+			
+			&:before,
+			&:after,
+			i{
+				@include transition(all .5s ease);
+			}
+		}
+		
+		span{
+			background: $darkblue_theme;
+			display: inline-block;
+			padding: .15rem 1.3rem .15rem .4rem;
+			position: relative;
+			vertical-align: bottom;
+		    top: 14px;
+	    	left: 18px;
+	    	font-family: 'Myriad Pro Condensed';
+    		text-transform: uppercase;
+			@include border-radius(3px);
+			@include transition(all .5s ease);
+		}
+	}
+}

@@ -94,91 +94,7 @@ nav{
     	font-weight: 100;
 	}
 	
-	.container_contact{
-		float: right;
-		cursor: pointer;
-		
-		&:hover{
-			span{
-				color: $darkblue_theme;
-				background: white;
-			}
-			
-			b{
-				&:before{
-					background: $blue_theme;
-				}
-				
-				&:after{
-					background: $darkblue_theme;
-				}
-				
-				i{
-					color: white;
-				}
-			}
-		}
-		
-		b{
-			display: inline-block;
-			position: relative;
-			padding: 6px 9px;
-			z-index: 1;
-			margin-top: .25rem;
-    		
-    		&:before{
-    			background: #f3f3f3;
-    			content: '';
-    			width: 100%;
-    			height: 100%;
-    			position: absolute;
-    			left: 0;
-    			top: 0;
-    			z-index: -1;
-    			@include border-radius(3px);
-    			@include transform(rotate(45deg));
-    		}
-    		
-    		&:after{
-    			background: #c7c7c7;
-    			content: '';
-    			width: 140%;
-    			height: 140%;
-    			position: absolute;
-    			left: -20%;
-    			top: -20%;
-    			z-index: -2;
-    			@include border-radius(5px);
-    			@include box-shadow(0 0 28px #323232);
-    			@include transform(rotate(45deg));
-    		}
-			
-			i{
-				font-size: 35px;
-				color: $darkblue_theme;
-			}
-			
-			&:before,
-			&:after,
-			i{
-				@include transition(all .5s ease);
-			}
-		}
-		
-		span{
-			background: $darkblue_theme;
-			display: inline-block;
-			padding: .15rem 1.3rem .15rem .4rem;
-			position: relative;
-			vertical-align: bottom;
-		    top: 14px;
-	    	left: 18px;
-	    	font-family: 'Myriad Pro Condensed';
-    		text-transform: uppercase;
-			@include border-radius(3px);
-			@include transition(all .5s ease);
-		}
-	}
+	@include container-contact;
 }
 
 section{
@@ -284,6 +200,143 @@ footer{
 		color: $darkblue_theme;
 		font-size: 14px;
 		font-family: 'Myriad Pro Condensed';
+	}
+}
+
+.modal{
+	&.contact{
+		max-width: 95%;
+		width: 360px;
+		overflow: visible;
+		background: rgb(206, 205, 205);
+		@include border-radius(4px);
+		
+		.modal-content{
+			padding: 0 .71rem 0;
+			position: relative;
+			
+			.close{
+				position: absolute;
+				top: .5rem;
+				right: .5rem;
+				display: inline-block;
+				background: $blue_theme;
+				color: white;
+				font-size: 20px;
+				padding: .0rem .35rem;
+				cursor: pointer;
+				@include transition(transform .35s ease);
+				@include border-radius(3px);
+				
+				&:hover{
+					@include transform(scale(.85) rotate(180deg));
+				}
+			}
+			
+			.slogan{
+				text-align: center;
+				padding: 1rem 2rem 1rem;
+				background: $blue_theme;
+				display: inline-block;
+				margin: 0 auto .3rem;
+				position: relative;
+				top: -8px;
+				@include border-radius(5px);
+				@include box-shadow(1px 2px 4px rgba(130,130,130,.4));
+				
+				@include container_contact;
+				
+				.container_contact{
+					float: none;
+					@include transform(scale(.7));
+				}
+			}
+			
+			
+			.row{
+				.col{
+					&.s12{
+						padding: 0;
+						
+						> .row{
+							margin: .4rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+textarea,
+input{
+	&:not([type]),
+	&[type=text],
+	&[type=password],
+	&[type=email], 
+	&[type=url], 
+	&[type=time], 
+	&[type=date], 
+	&[type=datetime-local], 
+	&[type=tel], 
+	&[type=number], 
+	&[type=search], 
+	&.materialize-textarea{
+		font-family: 'Myriad Pro Condensed';
+		padding: .5rem 1rem .5rem .9rem;
+		border: solid thin $blue_theme;
+		background: white;
+		color: #323232;
+		@include box-sizing(border-box);
+		@include border-radius(15px);
+		@include box-shadow(0px 2px 4px rgba(130, 130, 130, 0.62) inset);
+		
+		&:focus:not([readonly]){
+			border: solid thin $blue_theme;
+			@include box-shadow(0px 2px 4px rgba(130, 130, 130, 0.62) inset);
+			
+			+ label{
+				color: $blue_theme;
+			}
+		}
+		
+		&.valid{
+			border-bottom: solid 2px $blue_theme;
+			@include box-shadow(0px 2px 4px rgba(130, 130, 130, 0.62) inset);
+		}
+	}
+	
+	&:not([type]),
+	&[type=text],
+	&[type=password],
+	&[type=email], 
+	&[type=url], 
+	&[type=time], 
+	&[type=date], 
+	&[type=datetime-local], 
+	&[type=tel], 
+	&[type=number], 
+	&[type=search]{
+		height: 2rem;
+	}
+	
+	&.materialize-textarea{
+		min-height: 7rem;
+	}
+}
+
+.input-field{
+	margin-top: 0;
+	
+	label{
+		top: .4rem;
+		left: 1.3rem;
+		font-family: 'Myriad Pro Condensed';
+		color: $blue_theme;
+		
+		&.active{
+			color: $blue_theme;
+		}
 	}
 }
 

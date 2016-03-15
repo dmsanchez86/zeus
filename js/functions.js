@@ -3,9 +3,15 @@
 var App = {
     init: function(){
         // click to show modal contact
-        $('.container_contact').unbind('click').click(function(){
+        $('.container_contact:not(.popup)').unbind('click').click(function(){
             $('#modalContact').openModal();
         });
+        
+        // click to hide modal contact
+        $('.modal .close').unbind('click').click(function(){
+            $('#modalContact').closeModal();
+        });
+        
         
         this.lazy();
         this.viewport();
