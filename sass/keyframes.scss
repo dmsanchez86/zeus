@@ -1,0 +1,272 @@
+@keyframes moveRight{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(15px, 0, 0));
+    }
+}
+@-webkit-keyframes moveRight{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(15px, 0, 0));
+    }
+}
+@-moz-keyframes moveRight{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(15px, 0, 0));
+    }
+}
+@-o-keyframes moveRight{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(15px, 0, 0));
+    }
+}
+
+@keyframes moveLeft{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(-100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(-15px, 0, 0));
+    }
+}
+@-webkit-keyframes moveLeft{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(-100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(-15px, 0, 0));
+    }
+}
+@-moz-keyframes moveLeft{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(-100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(-15px, 0, 0));
+    }
+}
+@-o-keyframes moveLeft{
+    0%,25%{
+        opacity: 1;
+        @include transform(translate3d(-100px, 0, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+    75%{
+        @include transform(translate3d(-15px, 0, 0));
+    }
+}
+
+@keyframes moveTop{
+    0%{
+        @include transform(translate3d(0, -200px, 0) rotatex(70deg));
+    }
+    25%{
+        opacity: .3;
+        @include transform(translate3d(0, -200px, 0) );
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0) rotatex(0deg));
+    }
+}
+@-webkit-keyframes moveTop{
+    0%{
+        @include transform(translate3d(0, -200px, 0) rotatex(70deg));
+    }
+    25%{
+        opacity: .3;
+        @include transform(translate3d(0, -200px, 0) );
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0) rotatex(0deg));
+    }
+}
+@-moz-keyframes moveTop{
+    0%{
+        @include transform(translate3d(0, -200px, 0) rotatex(70deg));
+    }
+    25%{
+        opacity: .3;
+        @include transform(translate3d(0, -200px, 0) );
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0) rotatex(0deg));
+    }
+}
+@-o-keyframes moveTop{
+    0%{
+        @include transform(translate3d(0, -200px, 0) rotatex(70deg));
+    }
+    25%{
+        opacity: .3;
+        @include transform(translate3d(0, -200px, 0) );
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0) rotatex(0deg));
+    }
+}
+
+@keyframes moveBottom{
+    0%,25%{
+        opacity: .3;
+        @include transform(translate3d(0, 50px, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+@-webkit-keyframes moveBottom{
+    0%,25%{
+        opacity: .3;
+        @include transform(translate3d(0, 50px, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+@-mo-keyframes moveBottom{
+    0%,25%{
+        opacity: .3;
+        @include transform(translate3d(0, 50px, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+@-o-keyframes moveBottom{
+    0%,25%{
+        opacity: .3;
+        @include transform(translate3d(0, 50px, 0));
+    }
+    50%,100%{
+        opacity: 1;
+        @include transform(translate3d(0, 0, 0));
+    }
+}
+
+@keyframes scale{
+    0%,25%{
+        @include transform(scale3d(0, 0, 0));
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+    75%{
+        opacity: 1;
+        @include transform(scale3d(.7, .7, .7));
+    }
+    100%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+@-webkit-keyframes scale{
+    0%,25%{
+        @include transform(scale3d(0, 0, 0));
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+    75%{
+        opacity: 1;
+        @include transform(scale3d(.7, .7, .7));
+    }
+    100%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+@-moz-keyframes scale{
+    0%,25%{
+        @include transform(scale3d(0, 0, 0));
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+    75%{
+        opacity: 1;
+        @include transform(scale3d(.7, .7, .7));
+    }
+    100%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+}
+@-o-keyframes scale{
+    0%,25%{
+        @include transform(scale3d(0, 0, 0));
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+    75%{
+        opacity: 1;
+        @include transform(scale3d(.7, .7, .7));
+    }
+    100%{
+        opacity: 1;
+        @include transform(scale3d(1, 1, 1));
+    }
+}

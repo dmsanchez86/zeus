@@ -15,6 +15,7 @@ var App = {
         
         this.lazy();
         this.viewport();
+        this.logo();
     },
     viewport: function(){
         // initialization viewport
@@ -36,7 +37,22 @@ var App = {
     lazy: function(){
         // initialization lazy load
         $("img.lazy").lazyload({
-            effect: "fadeIn"
+            effect: "fadeIn",
+            threshold : 400
+        });
+    },
+    logo: function(){
+        // add load class to logo when the page is ready
+        setTimeout(function(){
+            $('.logo,body').addClass('load');
+        },1000);
+        
+        // event to reload animation logo
+        $('.logo').unbind('dblclick').dblclick(function(){
+            $(this).removeClass('load');
+            setTimeout(function(){
+                $('.logo').addClass('load');
+            },50);
         });
     }
 }

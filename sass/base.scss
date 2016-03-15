@@ -7,6 +7,15 @@
 
 body,html{ @include init; }
 
+body{
+	height: 100vh;
+	overflow: hidden;
+	
+	&.load{
+		overflow: visible;
+	}
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -37,9 +46,11 @@ header{
 	    width: 305px;
     	height: 457px;
     	@include transform(scale(.95));
+    	@include perspective(300px);
 		
 		img{
 			position: absolute;
+			opacity: 0;
 		}
 		
 		.circle{
@@ -65,14 +76,40 @@ header{
 			margin: auto;
 		}
 		
+		.name{
+			bottom: 30px;
+			left: -50px;
+		}
+		
 		.slogan{
 			bottom: -12px;
 			left: -19px;
 		}
 		
-		.name{
-			bottom: 48px;
-			left: -50px;
+		&.load{
+			.circle{
+				@include animation(scale .5s 1 1s ease forwards);
+			}
+			
+			.side-left{
+				@include animation(moveLeft 1s 1 1.5s ease forwards);
+			}
+			
+			.side-right{
+				@include animation(moveRight 1s 1 1.5s ease forwards);
+			}
+			
+			.ray{
+				@include animation(moveTop 1.8s 1 2.5s linear forwards);
+			}
+			
+			.name{
+				@include animation(moveBottom .4s 1 3.8s ease forwards);
+			}
+			
+			.slogan{
+				@include animation(moveBottom .4s 1 4.1s ease forwards);
+			}
 		}
 	}
 }
@@ -251,6 +288,10 @@ footer{
 				.container_contact{
 					float: none;
 					@include transform(scale(.7));
+					
+					&:hover{
+						cursor: default;
+					}
 				}
 			}
 			
