@@ -77,7 +77,21 @@ var App = {
                     message: $('#message').val()
                 },
                 success: function(response){
-                    console.log(response);
+                    var data = JSON.parse(response);
+                    
+                    if(data.status == "OK"){
+                        Materialize.toast(data.message, 4000);
+                        $('#name').val("");
+                        $('#email').val("");
+                        $('#telephone').val("");
+                        $('#subject').val("");
+                        $('#message').val("");
+                        setTimeout(function(){
+                            $('#modalContact').closeModal();
+                        },1500);
+                    }else{
+                        Materialize.toast(data.message, 4000);
+                    }
                 }
             });
         });
