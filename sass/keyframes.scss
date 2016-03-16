@@ -270,3 +270,53 @@
         @include transform(scale3d(1, 1, 1));
     }
 }
+
+
+@keyframes showText{
+    0%{
+        @include transform(translate3d(0, 20px, 0));
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+}
+@-webkit-keyframes showText{
+    0%{
+        @include transform(translate3d(0, 20px, 0));
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+}
+@-moz-keyframes showText{
+    0%{
+        @include transform(translate3d(0, 20px, 0));
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+}
+@-o-keyframes showText{
+    0%{
+        @include transform(translate3d(0, 20px, 0));
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        @include transform(translate3d(0px, 0, 0));
+    }
+}

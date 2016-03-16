@@ -12,9 +12,33 @@ var App = {
             $('#modalContact').closeModal();
         });
         
+        // click links navigator
+        $('.button-menu a').unbind('click').click(function(e) {
+            e.preventDefault();
+            
+            $('.button-menu a').removeClass('active');
+            $(this).addClass('active');
+            
+            var target = $(this).attr('href');
+            
+            if(window.innerWidth > 500){
+                $('html, body').stop().animate({
+        	        'scrollTop': ($(target).offset().top - 60)
+        	    }, 900, 'swing', function () {
+        	        window.location.hash = target;
+        	    });
+            }else{
+                $('html, body').stop().animate({
+        	        'scrollTop': ($(target).offset().top - 170)
+        	    }, 900, 'swing', function () {
+        	        window.location.hash = target;
+        	    });
+            }
+        });
+        
         this.lazy();
         this.viewport();
-        this.fancyscroll();
+        //this.fancyscroll();
         this.logo();
         this.formContact();
     },
