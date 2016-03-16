@@ -13,6 +13,7 @@ body{
 	
 	&.load{
 		overflow: visible;
+		overflow-x: hidden;
 	}
 }
 

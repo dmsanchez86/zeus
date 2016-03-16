@@ -20,20 +20,33 @@ var App = {
     },
     viewport: function(){
         // initialization viewport
-        $('section.blue .description').viewportChecker({
-            classToAdd: 'animated fadeInLeft',
-            offset: 100
-        });
-        
-        $('section .description').viewportChecker({
-            classToAdd: 'animated fadeInRight',
-            offset: 100
-        });
+        if(window.innerWidth > 900){
+            $('section.blue .description').viewportChecker({
+                classToAdd: 'animated fadeInLeft',
+                offset: 100
+            });
+            
+            $('section .description').viewportChecker({
+                classToAdd: 'animated fadeInRight',
+                offset: 100
+            });
+        }else{
+            $('section.blue .description').viewportChecker({
+                classToAdd: 'animated fadeInUp',
+                offset: 100
+            });
+            
+            $('section .description').viewportChecker({
+                classToAdd: 'animated fadeInUp',
+                offset: 100
+            });
+        }
         
         $('.networkings a i').viewportChecker({
             classToAdd: 'animated tada',
             offset: 100
         });
+        
     },
     lazy: function(){
         // initialization lazy load
@@ -96,7 +109,7 @@ var App = {
             });
         });
     }
-}
+};
 
 $().ready(function(){
     App.init();

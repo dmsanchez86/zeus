@@ -4203,14 +4203,15 @@ body, html {
   background-color: #DAEEF5;
   background-image: url(../images/header.png);
   background-position: top center;
-  background-size: 100% auto;
+  background-size: 105% auto;
   background-repeat: no-repeat; }
 
 body {
   height: 100vh;
   overflow: hidden; }
   body.load {
-    overflow: visible; }
+    overflow: visible;
+    overflow-x: hidden; }
 
 ::-webkit-scrollbar {
   width: 5px; }
@@ -4840,6 +4841,171 @@ input.materialize-textarea {
 .lean-overlay {
   background: rgba(255, 255, 255, 0.7); }
 
+@media (max-width: 1280px) {
+  body {
+    background-size: 110%; } }
+@media (max-width: 1170px) {
+  body {
+    background-size: 120%; }
+
+  section .description {
+    font-size: 18px; } }
+@media (max-width: 1080px) {
+  body {
+    background-size: 136%; } }
+@media (max-width: 968px) {
+  section .description {
+    font-size: 15px; } }
+@media (max-width: 930px) {
+  body {
+    background-size: 148%;
+    background-position: -129px 1px; } }
+@media (max-width: 900px) {
+  section.blue .description {
+    left: inherit; }
+  section .description {
+    position: relative;
+    width: 100%;
+    background: white;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+    top: -5px;
+    font-size: 18px;
+    padding: 1.5rem; }
+  section .separator {
+    min-height: 60px; } }
+@media (max-width: 850px) {
+  body {
+    background-size: 166%;
+    background-position: -84px 0; }
+
+  header .logo {
+    -webkit-transform: scale(0.79);
+    -khtml-transform: scale(0.79);
+    -moz-transform: scale(0.79);
+    -ms-transform: scale(0.79);
+    -o-transform: scale(0.79);
+    transform: scale(0.79); }
+
+  section h1 {
+    padding-top: .8rem;
+    font-size: 33px; }
+    section h1:before {
+      border-width: 20px 49vw 0 50vw; } }
+@media (max-width: 800px) {
+  body {
+    background-size: 185%;
+    background-position: -132px 0; }
+
+  nav h4 {
+    font-size: 20px; }
+  nav .container_contact {
+    margin-right: 1rem; } }
+@media (max-width: 700px) {
+  body {
+    background-size: 205%;
+    background-position: -178px 0; }
+
+  header .logo {
+    -webkit-transform: scale(0.69);
+    -khtml-transform: scale(0.69);
+    -moz-transform: scale(0.69);
+    -ms-transform: scale(0.69);
+    -o-transform: scale(0.69);
+    transform: scale(0.69); }
+
+  .modal.contact {
+    top: 0.8% !important; } }
+@media (max-width: 635px) {
+  body {
+    background-size: 180%;
+    background-position: -102px 0; }
+
+  header .logo {
+    -webkit-transform-origin: center 65px;
+    -khtml-transform-origin: center 65px;
+    -moz-transform-origin: center 65px;
+    -ms-transform-origin: center 65px;
+    -o-transform-origin: center 65px;
+    transform-origin: center 65px; }
+
+  nav {
+    margin-top: -5rem; } }
+@media (max-width: 600px) {
+  body {
+    background-size: 200%;
+    background-position: -91px 0; }
+
+  header .logo {
+    -webkit-transform: scale(0.59);
+    -khtml-transform: scale(0.59);
+    -moz-transform: scale(0.59);
+    -ms-transform: scale(0.59);
+    -o-transform: scale(0.59);
+    transform: scale(0.59); }
+
+  section .description {
+    font-size: 16px; } }
+@media (max-width: 540px) {
+  body {
+    background-size: 194%;
+    background-position: -100px 0; }
+
+  nav {
+    margin-top: -8rem; } }
+@media (max-width: 500px) {
+  body {
+    background-size: 228%;
+    background-position: -149px 0; }
+
+  nav h4 {
+    font-size: 18px; }
+  nav .container_contact span {
+    font-size: .8em;
+    top: 9px; }
+  nav .container_contact b {
+    padding: 4px 7px; }
+    nav .container_contact b i {
+      font-size: 20px; }
+
+  section h1 {
+    font-size: 27px; } }
+@media (max-width: 420px) {
+  body {
+    background-size: 224%;
+    background-position: -103px 0; }
+
+  header .logo {
+    -webkit-transform: scale(0.5);
+    -khtml-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: top center;
+    -khtml-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -ms-transform-origin: top center;
+    -o-transform-origin: top center;
+    transform-origin: top center; }
+
+  nav {
+    margin-top: -12rem; } }
+@media (max-width: 380px) {
+  nav {
+    padding-top: .7rem; }
+    nav h4 {
+      display: block;
+      text-align: center;
+      margin-bottom: .8rem; }
+    nav .container_contact {
+      float: none;
+      text-align: center; } }
+@media (max-width: 340px) {
+  body {
+    background-size: 241%;
+    background-position: -134px 0; } }
 @keyframes moveRight {
   0%,25% {
     opacity: 1;

@@ -1,0 +1,245 @@
+@media (max-width: 1280px){
+    body{
+        background-size: 110%;
+    }
+}
+
+@media (max-width: 1170px){
+    body{
+        background-size: 120%;
+    }
+    
+    section .description{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1080px){
+    body{
+        background-size: 136%;
+    }
+}
+
+@media (max-width: 968px){
+    
+    section .description{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 930px){
+    body{
+        background-size: 148%;
+        background-position: -129px 1px;
+    }
+}
+
+@media (max-width: 900px){
+    section {
+        &.blue{
+            .description{
+                left: inherit;
+            }
+        }
+        
+        .description{
+            position: relative;
+            width: 100%;
+            background: white;
+            bottom: inherit;
+            left: inherit;
+            right: inherit;
+            top: -5px;
+            font-size: 18px;
+            padding: 1.5rem;
+        }
+        
+        .separator{
+            min-height: 60px;
+        }
+    }
+}
+
+@media (max-width: 850px){
+    body{
+        background-size: 166%;
+        background-position: -84px 0;
+    }
+    
+    header {
+        .logo{
+            @include transform(scale(.79));
+        }
+    }
+    
+    section {
+        h1{
+            padding-top: .8rem;
+            font-size: 33px;
+            
+            &:before{
+                border-width: 20px 49vw 0 50vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+    body{
+        background-size: 185%;
+        background-position: -132px 0;
+    }
+    
+    nav {
+        h4{
+            font-size: 20px;
+        }
+        
+        .container_contact{
+            margin-right: 1rem;
+        }
+    }
+}
+
+@media (max-width: 700px){
+    body{
+        background-size: 205%;
+        background-position: -178px 0;
+    }
+    
+    header {
+        .logo{
+            @include transform(scale(.69));
+        }
+    }
+    
+    .modal{
+        &.contact{
+            top: 0.8% !important;
+        }
+    }
+}
+
+@media (max-width: 635px){
+    body{
+        background-size: 180%;
+        background-position: -102px 0;
+    }
+    
+    header {
+        .logo{
+            @include transform-origin(center 65px);
+        }
+    }
+    
+    nav{
+        margin-top: -5rem;
+    }
+}
+
+@media (max-width: 600px){
+    body{
+        background-size: 200%;
+        background-position: -91px 0;
+    }
+    
+    header {
+        .logo{
+            @include transform(scale(.59));
+        }
+    }
+    
+    section{
+        .description{
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 540px){
+    body{
+        background-size: 194%;
+        background-position: -100px 0;
+    }
+    
+    nav{
+        margin-top: -8rem;
+    }
+}
+
+@media (max-width: 500px){
+    body{
+        background-size: 228%;
+        background-position: -149px 0;
+    }
+    
+    nav{
+        h4{
+            font-size: 18px;
+        }
+        
+        .container_contact{
+            span{
+                font-size: .8em;
+                top: 9px;
+            }
+            
+            b{
+                padding: 4px 7px;
+                
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+    section{
+        h1{
+            font-size: 27px;
+        }
+    }
+}
+
+@media (max-width: 420px){
+    body{
+        background-size: 224%;
+        background-position: -103px 0;
+    }
+    
+    header {
+        .logo{
+            @include transform(scale(.50));
+            @include transform-origin(top center);
+        }
+    }
+    
+    nav{
+        margin-top: -12rem;
+    }
+}
+
+@media (max-width: 380px){
+    
+    nav{
+        padding-top: .7rem;
+        
+        h4{
+            display: block;
+            text-align: center;
+            margin-bottom: .8rem;
+        }
+        
+        .container_contact{
+            float: none;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 340px){
+    body{
+        background-size: 241%;
+        background-position: -134px 0;
+    }
+}
