@@ -12,7 +12,6 @@ var App = {
             $('#modalContact').closeModal();
         });
         
-        
         this.lazy();
         this.viewport();
         this.fancyscroll();
@@ -86,6 +85,7 @@ var App = {
                         $('#telephone').val("");
                         $('#subject').val("");
                         $('#message').val("");
+                        $('.input-field label').removeClass('active')
                         setTimeout(function(){
                             $('#modalContact').closeModal();
                         },1500);
